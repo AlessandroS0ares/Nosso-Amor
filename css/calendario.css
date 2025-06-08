@@ -1,0 +1,133 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 16px;
+  background: linear-gradient(135deg, #4facfe, #8e44ad);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.calendario {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.evento {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.evento:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.evento h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.evento p {
+  font-size: 1rem;
+  color: #eee;
+}
+
+/* Botão de voltar */
+.voltar-container {
+  margin-top: 60px; /* Aumenta o espaço acima do botão */
+  text-align: center; /* Centraliza o botão */
+}
+
+.botao-voltar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+  padding: 12px 24px;; /* Um pouco mais de espaço */
+  background: linear-gradient(135deg, #6a5acd, #1e90ff);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px; /* Mais arredondado */
+  font-weight: bold;
+  font-size: 1rem; /* Um pouco maior */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.botao-voltar:hover {
+  transform: translateY(-4px) scale(1.07);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(135deg, #7b68ee, #6495ed);
+}
+
+.botao-voltar::before {
+  content: "⬅️";
+  font-size: 18px;
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .calendario {
+    grid-template-columns: 1fr; /* Um evento por linha */
+    gap: 15px;
+  }
+
+  .evento {
+    padding: 12px;
+  }
+
+  .evento h2 {
+    font-size: 1.2rem;
+  }
+
+  .evento p {
+    font-size: 0.95rem;
+  }
+
+  .botao-voltar {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Para telas muito pequenas, tipo celulares compactos */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .evento h2 {
+    font-size: 1.1rem;
+  }
+
+  .evento p {
+    font-size: 0.9rem;
+  }
+
+  .botao-voltar {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}

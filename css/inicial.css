@@ -1,0 +1,209 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: linear-gradient(135deg, #4facfe, #8e44ad);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+.moldura-fofa {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #6a5acd, #1e90ff);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 5px solid white;
+  width: 90%;
+  max-width: 350px;
+}
+
+.foto-principal {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.foto-principal:hover {
+  transform: scale(1.03);
+}
+
+.contador-container {
+  margin: 30px 0;
+}
+
+.contador-relogio {
+  padding: 15px 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #6a5acd, #1e90ff);
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.topicos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.topicos a {
+  flex: 1 1 120px;
+  max-width: 180px;
+  text-align: center;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.topicos a:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Botão surpresa grande e chamativo */
+.botao-surpresa-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.botao-surpresa {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 20px 30px;
+  background: linear-gradient(135deg, #ff4081, #ff80ab);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 64, 129, 0.6);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao-surpresa:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(255, 64, 129, 0.8);
+}
+
+h1::after, h1::before {
+  content: " 💙💜";
+}
+
+.botao-voltar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espaço entre ícone e texto */
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6a5acd, #1e90ff);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.botao-voltar:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #7b68ee, #6495ed);
+}
+
+.botao-voltar::before {
+  content: "⬅️";
+  font-size: 18px;
+}
+
+/* RESPONSIVIDADE — Telas menores */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .contador-relogio {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+  }
+
+  .topicos {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .topicos a {
+    width: 80%;
+    max-width: 250px;
+    font-size: 1rem;
+  }
+
+  .botao-surpresa {
+    font-size: 1.2rem;
+    padding: 15px 25px;
+  }
+}
+
+/* Telas muito pequenas, tipo celular pequeno */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .moldura-fofa {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contador-relogio {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .botao-surpresa {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto 30px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 5px solid white;
+  background: #000;
+}
+
+.video-player {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 1s ease-in-out;
+  border-radius: 25px;
+  object-fit: cover;
+}

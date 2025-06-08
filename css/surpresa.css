@@ -1,0 +1,87 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4facfe, #8e44ad);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+}
+
+
+.container-surpresa {
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 25px;
+  border-radius: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  margin-bottom: 40px; /* Espaço para o botão */
+}
+
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.botoes-resposta {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.botoes-resposta button {
+  background: linear-gradient(135deg, #6a5acd, #1e90ff);
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 15px 35px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(26, 26, 70, 0.7);
+  transition: all 0.3s ease;
+}
+
+.botoes-resposta button:hover {
+  background: linear-gradient(135deg, #1e90ff, #6a5acd);
+  box-shadow: 0 7px 20px rgba(26, 26, 70, 0.9);
+}
+
+.resposta {
+  display: none;
+  margin-top: 20px;
+}
+
+#video-cancao {
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+
+.container-surpresa {
+  display: flex;
+  flex-direction: column; /* pra ficar do topo ao botão embaixo */
+  align-items: center;    /* centralizar horizontalmente */
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 25px;
+  border-radius: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  gap: 20px; /* espaçamento entre conteúdo e botão */
+}
+
+.texto-fofo {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>💙💜 Nossa Playlist 💙💜</title>
+  <link rel="stylesheet" href="/css/playlist.css">
+</head>
+<body>
+  <h1>Nossa Playlist 🎵</h1>
+
+<div class="player-container">
+  <div class="capa-musica">
+    <img id="capa" src="/musicas Amor/capa Musicas/Play.webp" alt="Capa da música">
+  </div>
+
+  <audio id="audio-player" controls hidden></audio>
+
+  <div class="botoes">
+    <button id="btn-prev" onclick="musicaAnterior()">⏮️</button>
+    <button id="btn-playpause" onclick="togglePlayPause()">▶️</button>
+    <button id="btn-next" onclick="proximaMusica()">⏭️</button>
+  </div>
+
+   <div class="progresso">
+    <span id="tempo-atual">0:00</span>
+    <input type="range" id="barra-progresso" value="0" min="0" max="100">
+    <span id="tempo-total">0:00</span>
+  </div>
+
+  <ul class="playlist">
+    <li onclick="selecionarMusica(0)">Talking To The Moon - Bruno Mars</li>
+    <li onclick="selecionarMusica(1)">A Hora é Agora - Jorge e Matheus</li>
+    <li onclick="selecionarMusica(5)">Casa - Colo de Deus</li>
+    <li onclick="selecionarMusica(2)">Tanto Faz - Luan Santana</li>
+    <li onclick="selecionarMusica(3)">Velha Infânca - Tribalista</li>
+    <li onclick="selecionarMusica(4)">Fim de Noite - Orochi</li>
+    <li onclick="selecionarMusica(6)">Aluga-se - Luan Santana</li>
+    <li onclick="selecionarMusica(7)">Perfect - Ed Sheeran</li>
+    <li onclick="selecionarMusica(8)">Meu-Abrigo - Melim</li>
+    <li onclick="selecionarMusica(9)">Aliança - Tribalista</li>
+    <li onclick="selecionarMusica(10)">Umbrella - Rihanna</li>
+    <li onclick="selecionarMusica(11)">Só Você - Denis DJ</li>
+    <li onclick="selecionarMusica(12)">Just The Way You Are - Bruno Mars</li>
+    <li onclick="selecionarMusica(13)">Deixa Como Tudo Tá - Grupo Menos é Mais</li>
+    <li onclick="selecionarMusica(14)">I Wanna Be Yours - Artic Monkeys</li>
+    <li onclick="selecionarMusica(15)">Te Vivo - Luan Santana</li>
+    <li onclick="selecionarMusica(16)">Pequena Flor - Gabriel Elias</li>
+    <li onclick="selecionarMusica(17)">Vem Cá - Pelé MilFlow</li>
+    <li onclick="selecionarMusica(18)">Never Be Alone - Shawn Mendes</li>
+    <li onclick="selecionarMusica(19)">Nós 2 - Jade Baraldo</li>
+    <li onclick="selecionarMusica(20)">Vagalumes - Pollo</li>
+    <li onclick="selecionarMusica(21)">Vejo Enfim a Luz Brilhar - Enrolados</li>
+    <li onclick="selecionarMusica(22)">Infinity - James Young</li>
+    <li onclick="selecionarMusica(23)">De Love - Pelé MilFlow</li>
+    <li onclick="selecionarMusica(24)">Afrodite - Delacruz</li>
+    <li onclick="selecionarMusica(25)">Sweather Wheater - The Neighbourhood</li>
+    <li onclick="selecionarMusica(26)">De Janeiro a Janeiro - Roberta Campos</li>
+    <li onclick="selecionarMusica(27)">All of me - John Legend</li>
+    <li onclick="selecionarMusica(28)">202 - Kweller & Enzo Cello</li>
+    <li onclick="selecionarMusica(29)">Die With a Smile - Lady Gaga & Bruno Mars</li>
+    <li onclick="selecionarMusica(30)">No Meu Coração Você Vai Sempre Estar - Tarzan</li>
+    <li onclick="selecionarMusica(31)">Terça de Tarde - Pedrosa</li>
+    <!-- Adicione mais músicas -->
+  </ul>
+</div>
+
+  <br><br>
+  <a href="/html/Amor_inicial.html" class="botao-voltar">Voltar</a>
+  <script src="/js/musica_amor.js"></script>
+</body>
+</html>

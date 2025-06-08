@@ -1,0 +1,161 @@
+/* Reset e corpo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4facfe, #8e44ad);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px 15px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título principal */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+h1::after, h1::before {
+  content: " 💙💜";
+}
+
+/* Cada categoria/plano */
+.plano {
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 30px;
+  background: rgba(255 255 255 / 0.1);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+  text-align: left;
+}
+
+/* Título das categorias */
+.plano h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+/* Lista limpa sem estilo default */
+.plano ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Cada item com checkbox e label */
+.plano li {
+  margin: 10px 0;
+  font-size: 1rem;
+  background: rgba(255 255 255 / 0.15);
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  word-break: break-word;
+}
+
+/* Hover suave */
+.plano li:hover {
+  background: rgba(255 255 255 / 0.3);
+}
+
+/* Checkbox customizado */
+.plano input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  accent-color: #6a5acd; /* Cor roxa bonita */
+}
+
+/* Botão voltar */
+.botao-voltar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6a5acd, #1e90ff);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(8px);
+  margin-top: 20px;
+}
+
+.botao-voltar:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #7b68ee, #6495ed);
+}
+
+.botao-voltar::before {
+  content: "⬅️";
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .plano {
+    padding: 15px;
+  }
+
+  .plano h2 {
+    font-size: 1.3rem;
+  }
+
+  .plano li {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .plano input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+
+  .botao-voltar {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .plano h2 {
+    font-size: 1.1rem;
+  }
+
+  .plano li {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .botao-voltar {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}

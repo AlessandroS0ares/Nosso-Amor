@@ -1,0 +1,176 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4facfe, #8e44ad); /* roxo e azul gradiente */
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* para um efeito leve de sombra no texto */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  /* destaque branco com sombra */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+h1::after, h1::before {
+  content: " 💙💜";
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* importante para responsividade */
+  justify-content: center;
+}
+
+button {
+  background: rgba(255 255 255 / 0.15);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  color: #fff;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255 255 255 / 0.3);
+}
+
+button:hover:not(.active) {
+  background: rgba(255 255 255 / 0.35);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+button.active {
+  background: #6a5acd;
+  color: #fff;
+  cursor: default;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  border: none;
+}
+
+.poesia-container {
+  max-width: 700px;
+  width: 100%;
+  background: rgba(255 255 255 / 0.15);
+  border-radius: 15px;
+  padding: 20px 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  color: #f0e9ff;
+  text-align: left;
+  min-height: 250px;
+  backdrop-filter: blur(15px);
+}
+
+.poesia {
+  margin-bottom: 20px;
+  border-left: 5px solid #9b59b6; /* roxo vibrante */
+  padding-left: 15px;
+  font-style: italic;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e0d7ff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.poesia-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #d1b3ff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+a.botao-voltar {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #6a5acd, #1e90ff);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+a.botao-voltar:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #7b68ee, #6495ed);
+}
+
+a.botao-voltar::before {
+  content: "⬅️";
+  font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .poesia-container {
+    padding: 15px 20px;
+  }
+
+  .poesia {
+    font-size: 0.95rem;
+  }
+
+  .poesia-title {
+    font-size: 1.1rem;
+  }
+
+  a.botao-voltar {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .poesia-container {
+    padding: 10px 15px;
+  }
+
+  .poesia {
+    font-size: 0.9rem;
+  }
+
+  .poesia-title {
+    font-size: 1rem;
+  }
+}

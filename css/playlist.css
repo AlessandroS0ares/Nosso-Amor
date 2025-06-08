@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: linear-gradient(135deg, #4facfe, #8e44ad);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+}
+
+.player-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #6a5acd, #1e90ff);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.capa-musica img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.botoes button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.botoes button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.playlist {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.playlist li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.playlist li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+h1::after, h1::before {
+  content: " 💙💜";
+}
+
+.botao-voltar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espaço entre ícone e texto */
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6a5acd, #1e90ff);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(8px);
+  padding: 10px 20px;
+}
+
+.botao-voltar:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #7b68ee, #6495ed);
+}
+
+.botao-voltar::before {
+  content: "⬅️";
+  font-size: 18px;
+}
+
+/* Responsividade: tablets */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .player-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .capa-musica img {
+    border-radius: 10px;
+  }
+
+  .botoes button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .playlist li {
+    padding: 8px;
+    font-size: 0.95rem;
+  }
+
+  .botao-voltar {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+}
+
+/* Responsividade: celulares pequenos */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .player-container {
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .botoes {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .botoes button {
+    padding: 8px;
+    margin: 4px;
+    font-size: 0.9rem;
+  }
+
+  .playlist li {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .botao-voltar {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
