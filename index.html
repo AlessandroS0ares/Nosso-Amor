@@ -14,7 +14,7 @@
   </div>
 
   <div class="contador-container">
-    <h2>Estamos juntos há:</h2>
+    <h2>💙💜 A gente se ama há: 💙💜</h2>
     <div id="contador" class="contador-relogio"></div>
   </div>
 
@@ -97,19 +97,24 @@ Hoje e amanhã: eu estou aqui — com amor, com fé e com tudo o que tenho de me
     }
   });
 </script>
+<audio id="audio" src="/audio/alianca.mp3" autoplay muted></audio>
+
 <script>
   const audio = document.getElementById("audio");
   const playBtn = document.getElementById("play-btn");
   const seekBar = document.getElementById("seek-bar");
 
+  function updatePlayButton() {
+    playBtn.textContent = audio.paused ? "▶️" : "⏸️";
+  }
+
   playBtn.addEventListener("click", () => {
     if (audio.paused) {
       audio.play();
-      playBtn.textContent = "⏸️";
     } else {
       audio.pause();
-      playBtn.textContent = "▶️";
     }
+    updatePlayButton();
   });
 
   audio.addEventListener("timeupdate", () => {
@@ -122,12 +127,20 @@ Hoje e amanhã: eu estou aqui — com amor, com fé e com tudo o que tenho de me
     audio.currentTime = seekTime;
   });
 
-  // Reproduz automaticamente com interação
-  document.body.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play().catch(() => {});
-    }
-  }, { once: true });
+  // Tenta tocar com som ao carregar
+  window.addEventListener("load", () => {
+    audio.muted = false;
+    audio.play().then(() => {
+      updatePlayButton();
+    }).catch(() => {
+      // Se for bloqueado, toca no primeiro clique
+      document.body.addEventListener("click", () => {
+        audio.muted = false;
+        audio.play().catch(() => {});
+        updatePlayButton();
+      }, { once: true });
+    });
+  });
 </script>
   <script src="/js/Amor_contador.js"></script>
   <script src="/js/Amor_inicial.js"></script>
