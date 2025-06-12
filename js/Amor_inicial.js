@@ -39,3 +39,19 @@ document.addEventListener('DOMContentLoaded', () => {
   videoPlayer.src = escolherProximoVideo();
   videoPlayer.play();
 });
+
+function criarCoracao() {
+  const coracao = document.createElement('div');
+  coracao.classList.add('coração');
+  coracao.style.left = `${Math.random() * 100}vw`;
+  coracao.style.animationDuration = `${Math.random() * 3 + 3}s`; // 3 a 6 segundos
+  document.querySelector('.corações').appendChild(coracao);
+
+  setTimeout(() => {
+    coracao.remove();
+  }, 6000);
+}
+
+// Geração contínua dos corações
+setInterval(criarCoracao, 300)
+
