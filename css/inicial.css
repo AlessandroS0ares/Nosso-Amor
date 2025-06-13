@@ -254,51 +254,6 @@ body::after {
   }
 }
 
-/* Mensagem de amor */
-.mensagem-namorados {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 85%;
-  max-width: 900px;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 30px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  font-size: 1.2rem;
-  color: #ffffff;
-  text-align: center;
-  backdrop-filter: blur(12px);
-  opacity: 0;
-  animation: aparecer 1.5s ease-out forwards, desaparecer 1.5s ease-in forwards;
-  animation-delay: 0s, 58.5s; /* anima 1.5s de entrada, espera até 60s para sair */
-  z-index: 9999;
-}
-
-.mensagem-namorados p {
-  line-height: 1.8;
-  margin: 0;
-}
-
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -60%) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@keyframes desaparecer {
-  to {
-    opacity: 0;
-    transform: translate(-50%, -55%) scale(0.95);
-  }
-}
-
 .spotify-player {
   width: 100%;
   max-width: 400px;
