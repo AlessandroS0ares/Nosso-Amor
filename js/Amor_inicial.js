@@ -13,8 +13,10 @@ const videos = [
   '/videos Amor/vid9.mp4',
   '/videos Amor/vid10.mp4',
   '/videos Amor/vid11.mp4',
-   '/videos Amor/vid12.mp4',
-    '/videos Amor/vid13.mp4',
+  '/videos Amor/vid12.mp4',
+  '/videos Amor/vid13.mp4',
+  '/videos Amor/vid14.mp4',
+  '/videos Amor/vid15.mp4',
 ];
 
 let ultimoIndex = -1;
