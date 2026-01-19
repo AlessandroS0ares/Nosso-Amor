@@ -6,7 +6,18 @@ const videos = [
   '/videos Amor/vid2.mp4',
   '/videos Amor/vid3.mp4',
   '/videos Amor/vid4.mp4',
-  '/videos Amor/vid5.mp4'
+  '/videos Amor/vid5.mp4',
+  '/videos Amor/vid6.mp4',
+  '/videos Amor/vid7.mp4',
+  '/videos Amor/vid8.mp4',
+  '/videos Amor/vid9.mp4',
+  '/videos Amor/vid10.mp4',
+  '/videos Amor/vid11.mp4',
+  '/videos Amor/vid12.mp4',
+  '/videos Amor/vid13.mp4',
+  '/videos Amor/vid14.mp4',
+  '/videos Amor/vid15.mp4',
+  '/videos Amor/vid16.mp4',
 ];
 
 let ultimoIndex = -1;
@@ -55,3 +66,16 @@ function criarCoracao() {
 // Geração contínua dos corações
 setInterval(criarCoracao, 300)
 
+document.addEventListener("DOMContentLoaded", () => {
+  const card = document.querySelector(".aniversario-card");
+  if (card) {
+    card.style.opacity = 0;
+    card.style.transform = "translateY(20px)";
+
+    setTimeout(() => {
+      card.style.transition = "all 1.5s ease";
+      card.style.opacity = 1;
+      card.style.transform = "translateY(0)";
+    }, 300);
+  }
+});
