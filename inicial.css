@@ -336,127 +336,179 @@ body::after {
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* ===== MOBILE FIRST ===== */
-
+/* Bloco especial de 1 ano */
 .aniversario-container {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
+  margin: 50px auto;
+  max-width: 900px;
+  padding: 0 20px;
 }
 
 .aniversario-card {
-  width: 100%;
-  max-width: 100%;
-  padding: 22px 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.12)
+  );
+  border-radius: 30px;
+  padding: 30px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  animation: brilhoSuave 6s ease-in-out infinite;
+}
 
+.aniversario-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+.aniversario-data {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.aniversario-texto {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #f5f5f5;
+}
+
+.assinatura-amor {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Animação suave de brilho */
+@keyframes brilhoSuave {
+  0% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .aniversario-card {
+    padding: 20px;
+  }
+
+  .aniversario-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .aniversario-texto {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* MOBILE FIRST */
+.aniversario-container {
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.aniversario-card {
+  position: relative;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.25),
     rgba(255, 255, 255, 0.1)
   );
-
-  border-radius: 26px;
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-
-  box-shadow: 
-    0 0 20px rgba(255, 255, 255, 0.25),
-    inset 0 0 15px rgba(255, 255, 255, 0.15);
-
-  animation: brilhoSuave 6s ease-in-out infinite;
+  border-radius: 28px;
+  padding: 24px 20px 30px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  animation: respirar 5s ease-in-out infinite;
 }
 
-/* Título */
+/* Brilho sutil passando */
+.brilho-carta {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: brilhoPasse 6s infinite;
+  pointer-events: none;
+}
+
 .aniversario-card h2 {
-  font-size: 1.4rem;
-  line-height: 1.3;
-  margin-bottom: 10px;
-  text-align: center;
-
-  text-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
 }
 
-/* Data */
 .aniversario-data {
-  font-size: 0.9rem;
-  opacity: 0.9;
-  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.85;
   margin-bottom: 18px;
 }
 
-/* Texto principal */
 .aniversario-texto {
   font-size: 0.95rem;
-  line-height: 1.7;
-  color: #f5f5f5;
-  text-align: left;
+  line-height: 1.8;
+  color: #fdfdfd;
 }
 
-/* Assinatura */
 .assinatura-amor {
   margin-top: 22px;
-  text-align: center;
-
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: bold;
-
-  text-shadow: 
-    0 0 8px rgba(255, 255, 255, 0.7);
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-/* Brilho suave */
-@keyframes brilhoSuave {
-  0% {
-    box-shadow: 
-      0 0 20px rgba(255, 255, 255, 0.25),
-      inset 0 0 15px rgba(255, 255, 255, 0.15);
-  }
-  50% {
-    box-shadow: 
-      0 0 35px rgba(255, 255, 255, 0.45),
-      inset 0 0 20px rgba(255, 255, 255, 0.2);
-  }
-  100% {
-    box-shadow: 
-      0 0 20px rgba(255, 255, 255, 0.25),
-      inset 0 0 15px rgba(255, 255, 255, 0.15);
-  }
+/* Corações pequenos */
+.corações-mini {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
-/* ===== TELAS MAIORES (TABLET) ===== */
+/* ANIMAÇÕES */
+@keyframes respirar {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+  100% { transform: scale(1); }
+}
+
+@keyframes brilhoPasse {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* DESKTOP */
 @media (min-width: 768px) {
-
-  .aniversario-card {
-    max-width: 720px;
-    padding: 30px;
-  }
-
-  .aniversario-card h2 {
-    font-size: 1.8rem;
-  }
-
-  .aniversario-texto {
-    font-size: 1.05rem;
-  }
-
-  .assinatura-amor {
-    font-size: 1.2rem;
-  }
-}
-
-/* ===== DESKTOP ===== */
-@media (min-width: 1024px) {
-
   .aniversario-container {
-    padding: 40px;
+    max-width: 900px;
   }
 
   .aniversario-card {
-    max-width: 900px;
+    padding: 35px;
   }
 
   .aniversario-card h2 {
     font-size: 2rem;
+  }
+
+  .aniversario-texto {
+    font-size: 1.05rem;
   }
 }
