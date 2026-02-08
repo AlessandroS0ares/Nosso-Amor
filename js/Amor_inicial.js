@@ -18,6 +18,7 @@ const videos = [
   '/videos Amor/vid14.mp4',
   '/videos Amor/vid15.mp4',
   '/videos Amor/vid16.mp4',
+  '/videos Amor/vid17.mp4',
 ];
 
 
